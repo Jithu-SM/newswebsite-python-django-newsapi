@@ -17,7 +17,7 @@ A simple Django-based news website that fetches real-time news using the NewsAPI
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/newswebsite-python-django-newsapi.git
+git clone https://github.com/jithu-sm/newswebsite-python-django-newsapi.git
 cd newswebsite-python-django-newsapi/newsproject
 ```
 
