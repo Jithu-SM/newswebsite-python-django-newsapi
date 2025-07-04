@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time News</title>
+    <link rel="stylesheet" href="{% static 'newsapp/style.css' %}">
+</head>
+<body>
+   <h1>Top News</h1>
+   <div class="news-container">
+    {% if news_list %}
+        {% for news in news_list %}
+            <div class="news-card">
+                <h2>{{ news.title }}</h2>
+                <p>{{ news.description }}</p>
+                {% if news.content %}
+                    <div>{{ news.content|safe }}</div>
+                {% endif %}
+                <a href="{{ news.url }}" target="_blank">Read more</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-news">No news articles available.</p>
+    {% endif %}
+   </div>
+</body>
+</html>
